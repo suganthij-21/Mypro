@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+            animation-name: siva;
+            animation-duration: 2s;
+            text-align: center;
+            line-height: 100px;
+            color: azure;
+            font-weight: bold;
+            animation-iteration-count: 4;
+            animation-direction: alternate-reverse;
+        }
+        @keyframes siva {
+            from{
+                background-color: brown;
+                transform: scale(1.7);
+            }
+            to{
+                background-color: chocolate;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>Animation</div>
+</body>
+</html>
