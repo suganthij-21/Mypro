@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+            background-color: #18c6c9;
+            width: 100%;
+            height: 100%; 
+        }
+        .card{
+            position: relative;
+            width: 300px;
+            height: 400px;
+            border: 10px solid #000 ;
+            margin: 50px auto ;
+            box-shadow: inset 3px 0px 10px 0px;
+            background-color: #e6f0e6;
+        }
+        .card .container{
+            width: 80%;
+            height: 80%;
+            margin: auto;
+
+        }
+        .card .container #head{
+            font-family: sans-serif;
+            font-size: 1.5em;
+            margin: 60px auto;
+            color: rgba(189, 25, 211, 0.685);
+            font-weight: 900px;
+        }
+        .card p{
+            font-size: 1.1em;
+            line-height: 1.5em;
+            font-family: sans-serif;
+            color: #0984e3;
+            font-style: italic;text-align: center;
+            margin: 30px auto;
+        }
+        .card .front{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: -10px 0px -10px 0px;
+            border: 10px solid #132;
+            backface-visibility: hidden;
+            background-color: rgb(174, 53, 81);
+            transform-style: preserve-3d;
+            transform-origin: 0% 50% ;
+            transform: perspective(800px)rotateY(0deg);
+            transition: all.8s ease-in-out;
+        }
+        .card:hover .front{
+            transform: perspective(800px)rotateY(-170deg);
+            background-color: #ecf1ec;
+        }
+        .card .back{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: -10px 0px -10px 0px;
+            border: 10px solid #132;
+            backface-visibility: visible;
+            filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+            transform-style: preserve-3d;
+            transform-origin: 0% 50%;
+            transition: all 0.8s ease-in-out;
+            background-color: #fa118d;
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+        } 
+        .card:hover .back
+        {
+            transform: perspective(800px)rotateY(-170deg);
+            box-shadow: 7px 0px 5px 0px rgba(0,0,0,0.1),
+                        inset 2px 0px 15px 0px rgba(0,0,0,0.1);
+            background-color: #0fdbd1;
+            
+        }
+       a button{
+            background-color: #1ee5ec;
+            width: 30%;
+            height: 10%;
+            border-radius: 5px;
+            margin-left: 35%;
+            font-size: 20px;
+            font-weight: bold;
+        } 
+        a button:hover{
+            background-color: rgb(16, 241, 223);
+            box-shadow: 2px 2px 5px palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="back"><img src="img/IMG-20231225-WA0000.jpg"width="200px" height="200px" style="border-radius: 20px 30px ;" alt=""></div>
+        <div class="front">
+            <img src="img/IMG-20240826-WA0001.jpg" width="200px" height="200px" style="border-radius: 20px 30px;" alt="">
+        </div>
+        <div class="container">
+            <p id="head">happy birthday</p>
+            <p>enjoy your special day
+            <span>you are the best soal of in my life</span>
+            you are the best student of in my life.</p>
+            <p>achive your goal</p>
+            <a href="wish.html"><button>wish</button></a>
+        </div>
+    </div>
+</body>
+</html>
